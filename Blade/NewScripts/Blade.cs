@@ -121,10 +121,11 @@ public class Blade : MonoBehaviour
             GameObject upperHull = hull.CreateUpperHull(target, upperMaterial);
             SliceObject(upperHull);
 
+            upperHull.layer = LayerMask.NameToLayer("SliceableLayer");
+            upperHull.AddComponent<slabMoveScript>();
 
             GameObject lowerHull = hull.CreateLowerHull(target, lowerMaterial);
             // SliceObject(lowerHull);
-            lowerHull.AddComponent<slabMoveScript>();
             SliceObject(lowerHull);
 
             lowerHull.layer = LayerMask.NameToLayer("SliceableLayer");
@@ -139,6 +140,7 @@ public class Blade : MonoBehaviour
         rb.useGravity = true;
         MeshCollider meshCollider = slicedObject.AddComponent<MeshCollider>();
         meshCollider.convex = true;
+        // meshCollider.isTrigger = true;
         rb.AddExplosionForce(cutforce, slicedObject.transform.position, 1);
     }
 
