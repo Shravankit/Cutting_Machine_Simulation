@@ -8,6 +8,8 @@ public class BladeCollision : MonoBehaviour
     private Vector3 collisionPoint;
     private ParticleSystem sparksInstance; // Instance of the spawned particle system
 
+    public AudioClip sawEffect;
+
     private void OnTriggerEnter(Collider other) {
         // Find the collision point on the collider's bounds
         collisionPoint = other.ClosestPointOnBounds(transform.position);
@@ -15,13 +17,16 @@ public class BladeCollision : MonoBehaviour
         Debug.Log($"Blade collided with {other.gameObject.name} at {collisionPoint}");
 
         // Instantiate the particle system at the collision point
-        sparksInstance = Instantiate(sparksSystemPrefab, collisionPoint, Quaternion.identity);
+        // sparksInstance = Instantiate(sparksSystemPrefab, collisionPoint, Quaternion.identity);
         
         // Parent the particle system to the collider's transform
-        sparksInstance.transform.parent = other.transform;
+        // sparksInstance.transform.parent = other.transform;
         
         // Play the particle system
         sparksInstance.Play();
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = sawEffect;
+        audio.Play();
     }
 
     private void OnTriggerExit(Collider other) {

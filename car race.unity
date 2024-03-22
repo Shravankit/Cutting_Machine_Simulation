@@ -217,7 +217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332921303}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1369356650}
   m_Follow: {fileID: 1369356650}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 85
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -252,8 +252,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332921303}
-  m_LocalRotation: {x: 0.26693356, y: 0.000000028720944, z: -0.00000000795524, w: 0.96371496}
-  m_LocalPosition: {x: 608, y: 6.23, z: 346.5}
+  m_LocalRotation: {x: 0.2669336, y: -3.4238033e-15, z: 6.016015e-17, w: 0.96371496}
+  m_LocalPosition: {x: 50.8, y: 5.74, z: -72.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418122304}
@@ -627,7 +627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1549015148369205718, guid: f1c6024e4e838324ab7fad4bcf9b4e66, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4178211024554316808, guid: f1c6024e4e838324ab7fad4bcf9b4e66, type: 3}
       propertyPath: m_RootOrder
@@ -750,7 +750,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 85
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -775,8 +775,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24920839, y: -0.6617365, z: 0.24920839, w: 0.6617365}
-  m_LocalPosition: {x: 625.5, y: 13.7, z: 364.7}
+  m_LocalRotation: {x: 0.2669336, y: -3.4238033e-15, z: 6.016015e-17, w: 0.96371496}
+  m_LocalPosition: {x: 50.8, y: 5.74, z: -72.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
@@ -1107,10 +1107,10 @@ MonoBehaviour:
     FLWheel: {fileID: 1807741438}
     BRWheel: {fileID: 1089487161}
     BLWheel: {fileID: 689046612}
-  gasInput: 0
+  gasInput: 1
   steerInput: 0
   breakInput: 0
-  motorPower: 500
+  motorPower: 5000
   breakPower: 5000000
   slipAngle: 0
   steeringCurve:
@@ -1310,6 +1310,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 402821036185084285, guid: 47f1488057646f4499adfb18c1c22b53, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402821036185084285, guid: 47f1488057646f4499adfb18c1c22b53, type: 3}
       propertyPath: m_Mass
       value: 1000
       objectReference: {fileID: 0}
@@ -1339,15 +1343,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399919844777392334, guid: 47f1488057646f4499adfb18c1c22b53, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 608
+      value: 50.8
       objectReference: {fileID: 0}
     - target: {fileID: 3399919844777392334, guid: 47f1488057646f4499adfb18c1c22b53, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.73
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 3399919844777392334, guid: 47f1488057646f4499adfb18c1c22b53, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 354
+      value: -64.8
       objectReference: {fileID: 0}
     - target: {fileID: 3399919844777392334, guid: 47f1488057646f4499adfb18c1c22b53, type: 3}
       propertyPath: m_LocalRotation.w

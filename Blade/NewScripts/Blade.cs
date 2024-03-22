@@ -129,6 +129,7 @@ public class Blade : MonoBehaviour
             SliceObject(lowerHull);
 
             lowerHull.layer = LayerMask.NameToLayer("SliceableLayer");
+            lowerHull.transform.position = new Vector3(-0.15f, 0f, 0f);
             
             
             Destroy(target);
@@ -140,6 +141,7 @@ public class Blade : MonoBehaviour
         rb.useGravity = true;
         MeshCollider meshCollider = slicedObject.AddComponent<MeshCollider>();
         meshCollider.convex = true;
+        // meshCollider.isTrigger = true;
         // meshCollider.isTrigger = true;
         rb.AddExplosionForce(cutforce, slicedObject.transform.position, 1);
     }
